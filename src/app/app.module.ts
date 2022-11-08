@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProdutosComponent } from './produtos/produtos.component';
-import { ProdutosDetailsComponent } from './produtos-details/produtos-details.component';
+import { ListComponent } from './list/list.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProdutosComponent,
-    ProdutosDetailsComponent
+    ListComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

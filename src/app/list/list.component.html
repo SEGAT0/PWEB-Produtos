@@ -1,0 +1,57 @@
+
+<div class="table" >
+    <table class="table2" border="10" > 
+        <tr>
+            <td>produto</td>
+            <td>id</td>
+            <td>fornecedor</td>
+            <td>tipo</td>
+            <td>custo</td>
+            
+        </tr>
+        <tr  *ngFor="let p of prods">
+                <td>{{p.produto}}</td>
+                <td>{{p.id}}</td>
+                <td>{{p.fornecedor}}</td>
+                <td>{{p.tipo}}</td>
+                <td>{{p.custo}}</td>
+                <td>
+                    <button type="button" (click)="onSelect(p)">Editar Produto</button>
+                </td>
+            </tr>
+    
+    </table>
+    
+    <div  *ngIf="selectedpd">
+        <h1>produto: {{selectedpd.produto | uppercase}}</h1>
+        <h3>id: {{selectedpd.id}}</h3>
+        <h3>fornecedor: {{selectedpd.fornecedor}}</h3>
+        <h3>tipo: {{selectedpd.tipo}}</h3>
+        <h3>custo: {{selectedpd.custo}}</h3>
+        
+         
+        
+        <div class="model">
+        <label class="label" for="produto"> New produto: </label>
+        <input class="label" id = "produto" [(ngModel)]="selectedpd.produto" placeholder="produto">
+        
+        <label class="label" for="id"> New id: </label>
+        <input class="label" id = "id" [(ngModel)]="selectedpd.id" placeholder="id">
+        
+        <label for="fornecedor"> New fornecedor: </label>
+        <input id = "fornecedor" [(ngModel)]="selectedpd.fornecedor" placeholder="fornecedor">
+    
+        
+        <label for="tipo"> New tipo: </label>
+        <input id = "tipo" [(ngModel)]="selectedpd.tipo" placeholder="tipo">
+    
+    
+        <label for="custo"> New custo: </label>
+        <input id = "custo" [(ngModel)]="selectedpd.custo" placeholder="custo">
+        
+        </div>
+        
+    </div>
+    
+    </div>
+    
