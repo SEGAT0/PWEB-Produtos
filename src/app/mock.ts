@@ -1,4 +1,4 @@
-import { produtos } from "./products";
+import { produtos } from "./students";
 
 export const PRODUTOS: produtos[] = [
 {produto: 'Play4', id: 20, fornecedor: 'sony', tipo: 'eletronico', custo: 2000 },

@@ -1,0 +1,29 @@
+<div *ngIf="selectedpd">
+    <h1>produto: {{selectedpd.produto | uppercase}}</h1>
+    <h3>id: {{selectedpd.id}}</h3>
+    <h3>fornecedor: {{selectedpd.fornecedor}}</h3>
+    <h3>tipo: {{selectedpd.tipo}}</h3>
+    <h3>custo: {{selectedpd.custo}}</h3>
+   
+    
+    <label class="label" for="produto"> New produto: </label>
+    <input class="label" id = "produto" [(ngModel)]="selectedpd.produto" placeholder="produto">
+    
+    <label class="label" for="id"> New id: </label>
+    <input class="label" id = "id" [(ngModel)]="selectedpd.id" placeholder="id">
+    
+    <label for="fornecedor"> New fornecedor: </label>
+    <input id = "fornecedor" [(ngModel)]="selectedpd.fornecedor" placeholder="fornecedor">
+
+    
+    <label for="tipo"> New tipo: </label>
+    <input id = "tipo" [(ngModel)]="selectedpd.tipo" placeholder="tipo">
+
+
+    <label for="custo"> New custo: </label>
+    <input id = "custo" [(ngModel)]="selectedpd.custo" placeholder="custo">
+    
+
+
+
+</div>

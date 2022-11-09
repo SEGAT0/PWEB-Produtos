@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PRODUTOS } from '../mock';
-import { produtos} from '../products';
+
+import { produtos} from '../students';
+import { ProdService } from '../prod.service';
 
 @Component({
   selector: 'app-list',
@@ -10,14 +11,24 @@ import { produtos} from '../products';
 export class ListComponent implements OnInit {
 
   
-  prods = PRODUTOS;
+  //prods = PRODUTOS;
+  prods: produtos[] = []
   selectedpd? : produtos;
  
   
-  constructor() { }
+  //constructor() { }
+  constructor(private prodService: ProdService){}
 
-  ngOnInit(): void {
+
+  getproducts(): void{  
+    this.prodService.getproducts()
+    .subscribe(products => this.prods = products)
+ }
+
+ngOnInit(): void {
+  this.getproducts
   }
+
 onSelect(pdr: produtos): void{
   this.selectedpd = pdr;
 }
